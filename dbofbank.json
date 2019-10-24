@@ -1,0 +1,119 @@
+use dbofbank //създавеме си базата
+
+db.createCollection("employees")
+db.createCollection("departments")
+db.createCollection("customers")
+
+db.employees.insertOne(
+	{
+		_id: 1,
+		"fName":"Mihail",
+		"lName":"Minev",
+		"address":"Plovdiv",
+		"number":+359874512653,
+		"email":"mm@gmail.com",
+		"position":"consultant"
+	}
+)
+
+db.employees.insertOne(
+	{
+		_id: 2,
+		"fName":"Yani",
+		"lName":"Yanova",
+		"address":"Sofia, st. Gladston",
+		"number":+359874412596,
+		"email":"yanova00@mail.bg",
+		"position":"manager"
+	}
+)
+
+db.employees.insertOne(
+	{
+		_id: 3,
+		"fName":"Hristy",
+		"lName":"Bodeva",
+		"address":"Hisaria, bul. Svoboda",
+		"number":+359843651653,
+		"email":"heysomebody@gmail.com",
+		"position":"consultant"
+	}
+)
+
+
+db.employees.insertOne(
+	{
+		_id: 4,
+		"fName":"Krisko",
+		"lName":"Kostov",
+		"address":"Plovdiv, st. Vasil Aprilov",
+		"number":+359874512453,
+		"email":"ubiec.ubiec@mail.bg",
+		"position":"consultant"
+	}
+)
+
+
+db.employees.insertOne(
+	{
+		_id: 5,
+		"fName":"Todor",
+		"lName":"Bulev",
+		"address":"Sofia, st. Asen",
+		"number":+359884532165,
+		"email":"todorbulev@mail.bg",
+		"position":"operator"
+	}
+)
+
+db.departments.insertMany([
+	{	
+		_id: 1,
+		"name":"consultant"
+	},
+	{	
+		_id: 2,
+		"name":"manager"
+	},
+	{	
+		_id: 3,
+		"name":"operator"
+	}
+	
+])
+
+
+db.customers.insertMany([
+	{
+		_id: 1,
+		"fName":"Boris",
+		"lName":"Stanimirov",
+		"address":"Sofia, bul. Svoboda",
+		"number":+359883526475,
+		"email":"boris@mail.bg"
+	},
+	{
+		_id: 2,
+		"fName":"Borisa",
+		"lName":"Caneva",
+		"address":"Plovdiv, st. Gladston",
+		"number":+359874512967,
+		"email":"caneva12@gmail.com"
+	},
+	{
+		_id: 3,
+		"fName":"Mihail",
+		"lName":"Petrov",
+		"address":"Plovdiv, Trakia",
+		"number":+3598812512199,
+		"email":"petrovmihail@mail.bg"
+	},
+	{
+		_id: 4,
+		"fName":"Anna",
+		"lName":"Piryankova",
+		"address":"Sofia, bul. Sofia",
+		"number":+359873256874,
+		"email":"piryankovaa@gmail.com"
+	}
+])
